@@ -2,8 +2,9 @@
 import "../css/App.css";
 import ListContacts from "./ListContacts";
 
+// Define parent React component
 const App = () => {
-  // Object array of mock 'test' data to pass into ListContacts component via props / destructing
+  // Object array of mock 'test' data to pass down to ListContacts component via parent 'App' component
   const contacts = [
     {
       id: "karen",
@@ -25,7 +26,7 @@ const App = () => {
     },
   ];
 
-  // return statement passing in component props for 'contacts'
+  // return statement passing in component props for 'contacts' array
   return (
     <div>
       <ListContacts contacts={contacts} />
